@@ -1,0 +1,24 @@
+[GLOBAL]
+pants_version = "2.21.0a0"
+backend_packages = [
+    "pants.backend.build_files.fmt.ruff",
+    "pants.backend.docker",
+    "pants.backend.docker.lint.hadolint",
+    "pants.backend.python",
+    "pants.backend.experimental.python.lint.ruff.check",
+    "pants.backend.experimental.python.lint.ruff.format",
+    "pants.backend.experimental.python.typecheck.pyright",
+]
+
+[source]
+root_patterns = ["/", "src/services/*", "src/docker", "tests"]
+
+[python]
+interpreter_constraints = ["CPython==3.12.*"]
+pip_version = "24.0"
+
+[python-infer]
+use_rust_parser = true
+
+[environments-preview.names]
+python_slim = "//:python_slim"

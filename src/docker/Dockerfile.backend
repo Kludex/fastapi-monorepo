@@ -1,0 +1,6 @@
+FROM python:3.12.2-slim
+
+WORKDIR /app
+
+COPY src.services.backend/app.pex /bin/app
+ENTRYPOINT [ "/bin/app" ]

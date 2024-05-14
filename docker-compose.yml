@@ -1,0 +1,7 @@
+services:
+  backend:
+    image: backend:latest
+    container_name: backend
+    ports:
+      - "8000:8000"
+
