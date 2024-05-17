@@ -15,6 +15,7 @@ root_patterns = ["/", "src/services/*", "src/docker", "tests"]
 
 [python]
 interpreter_constraints = ["CPython==3.12.*"]
+enable_resolves = true
 pip_version = "24.0"
 
 [python-infer]
